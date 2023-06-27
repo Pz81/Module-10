@@ -118,6 +118,7 @@ function gameLoop(pacman, ghosts) {
 }
 
 function startGame() {
+
   document.getElementById("gameover").style.display = 'none';
   playAudio(soundGameStart);
 
