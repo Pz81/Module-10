@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -52,7 +54,10 @@ body {
 }
 
 #start-button {
+  display: flex;
   margin-top: 20px;
+  position: inherit;
+  left: 0;
 }
 
 .hide {
@@ -90,7 +95,16 @@ body {
 }
 
 .ghost::before {
-
+  content: '';
+  display: block;
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: black;
+  border-radius: 50%;
+  left: 3px;
+  top: 5px;
+  border: 2px solid white;
 }
 
 .ghost::after {
@@ -154,4 +168,19 @@ body {
       0 20px
     );
   }
+}
+#gameover {
+  display: none;
+position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+#gameover img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 980px;
+  width: 980px;
 }

@@ -34,6 +34,8 @@ function playAudio(audio) {
 // --- GAME CONTROLLER --- //
 function gameOver(pacman, grid) {
   playAudio(soundGameOver);
+  document.getElementById("gameover").style.display = 'block';
+  
 
   document.removeEventListener('keydown', (e) =>
     pacman.handleKeyInput(e, gameBoard.objectExist.bind(gameBoard))
@@ -116,6 +118,7 @@ function gameLoop(pacman, ghosts) {
 }
 
 function startGame() {
+  document.getElementById("gameover").style.display = 'none';
   playAudio(soundGameStart);
 
   gameWin = false;
